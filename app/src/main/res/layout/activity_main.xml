@@ -8,91 +8,83 @@
 
     <EditText
         android:id="@+id/txtFirstNumber"
-        android:layout_width="235dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginBottom="15dp"
-        android:height="48dp"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_margin="10dp"
+        android:textSize="25sp"
         android:ems="10"
-        android:hint="Enter first number"
+        android:hint="Enter second number"
         android:inputType="number"
-        app:layout_constraintBottom_toTopOf="@+id/txtSecondNumber"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/txtSecondNumber"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="19dp"
-        android:height="48dp"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_margin="10dp"
+        android:layout_marginTop="10dp"
         android:ems="10"
         android:hint="Enter second number"
         android:inputType="number"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
-        app:layout_constraintEnd_toEndOf="@+id/txtFirstNumber"
-        app:layout_constraintStart_toStartOf="@+id/txtFirstNumber"
-        app:layout_constraintTop_toBottomOf="@+id/txtFirstNumber" />
+        android:textSize="25sp"
+        app:layout_constraintTop_toBottomOf="@+id/txtFirstNumber"
+        tools:layout_editor_absoluteX="3dp" />
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="220dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="20dp"
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/txtViewResult"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtSecondNumber">
 
         <Button
             android:id="@+id/btnSum"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_margin="2dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
             android:onClick="sum"
             android:text="+" />
 
         <Button
             android:id="@+id/btnSub"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_margin="2dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginRight="5dp"
             android:onClick="sub"
             android:text="-" />
 
         <Button
             android:id="@+id/btnMul"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_margin="2dp"
-            android:layout_weight="1"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginRight="5dp"
             android:onClick="mul"
             android:text="*" />
 
         <Button
             android:id="@+id/btnDiv"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_margin="2dp"
-            android:layout_weight="1"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginRight="10dp"
             android:onClick="div"
             android:text="/" />
 
-    </LinearLayout>
+    </GridLayout>
 
     <TextView
         android:id="@+id/txtViewResult"
-        android:layout_width="234dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="317dp"
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:layout_marginTop="10dp"
         android:text="Result: 0"
         android:textAlignment="center"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/gridLayout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
