@@ -8,7 +8,7 @@
 
     <EditText
         android:id="@+id/txtFirstNumber"
-        android:layout_width="0dp"
+        android:layout_width="235dp"
         android:layout_height="0dp"
         android:layout_marginTop="12dp"
         android:layout_marginBottom="15dp"
@@ -17,35 +17,33 @@
         android:hint="Enter first number"
         android:inputType="number"
         app:layout_constraintBottom_toTopOf="@+id/txtSecondNumber"
-        app:layout_constraintEnd_toEndOf="@+id/txtSecondNumber"
-        app:layout_constraintStart_toStartOf="@+id/txtSecondNumber"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/txtSecondNumber"
-        android:layout_width="223dp"
+        android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="84dp"
-        android:layout_marginBottom="26dp"
+        android:layout_marginBottom="19dp"
         android:height="48dp"
         android:ems="10"
         android:hint="Enter second number"
         android:inputType="number"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/txtFirstNumber"
+        app:layout_constraintStart_toStartOf="@+id/txtFirstNumber"
         app:layout_constraintTop_toBottomOf="@+id/txtFirstNumber" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="226dp"
-        android:layout_height="56dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginEnd="5dp"
-        android:layout_marginBottom="16dp"
+        android:layout_width="220dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="20dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toTopOf="@+id/txtViewResult"
-        app:layout_constraintEnd_toEndOf="@+id/txtViewResult"
-        app:layout_constraintStart_toStartOf="@+id/txtViewResult"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtSecondNumber">
 
         <Button
@@ -86,14 +84,14 @@
 
     <TextView
         android:id="@+id/txtViewResult"
-        android:layout_width="214dp"
+        android:layout_width="234dp"
         android:layout_height="0dp"
-        android:layout_marginStart="84dp"
-        android:layout_marginBottom="316dp"
+        android:layout_marginBottom="317dp"
         android:text="Result: 0"
         android:textAlignment="center"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
